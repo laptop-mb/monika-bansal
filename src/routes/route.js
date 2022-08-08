@@ -15,7 +15,7 @@ router.get('/test-me', function (req, res) {
     helper.printMonth()
     helper.printBatch()
 
-    let x = "function up"
+    let x = "    function up   "
     x = formatter.trim(x)
     formatter.changeToUpperCase()
     formatter.changeToLowerCase()
