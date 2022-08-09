@@ -35,4 +35,50 @@ router.get('/student-details/:name', function(req, res){
     res.send('Dummy response')
 })
 
+router.get("/movies", function(req,res){
+    let moviesArray = ["3 iditos", "titanic","pk", "forest gump"]
+    console.log(moviesArray)
+    res.send(moviesArray)
+})
+
+router.get("/movies/:indexNumber", function(req,res){
+    console.log("this request is "+JSON.stringify(req.params))
+    console.log("indexNumber is", " " + req.params.indexNumber)
+    res.send("done")
+})
+
+router.get("/shoes",function(req,res){
+    let shoesQuery = req.query.shoes
+    console.log(shoesQuery)
+})
+
+router.get("/films/:filmId" , function(req,res){
+    let moviesArray2 = [ {
+        "id": 1,
+        "name": "The Shining"
+       }, {
+        "id": 2,
+        "name": "Incendies"
+       }, {
+        "id": 3,
+        "name": "Rang de Basanti"
+       }, {
+        "id": 4,
+        "name": "Finding Nemo"
+       }]
+
+       let filmId = req.params.filmId
+       for(let i=0; i<films.length; i++){
+        let film = films[i]
+        if(film.id==filmId){
+            return res.send(film)
+        }
+       }
+       res.send("the film id dosent match any movie")
+
+       console.log(moviesArray2)
+       res.send(moviesArray2)
+          
+})
+
 module.exports = router;
