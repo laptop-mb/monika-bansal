@@ -35,17 +35,19 @@ router.get('/student-details/:name', function(req, res){
     res.send('Dummy response')
 })
 
-router.get("/movies", function(req,res){
+router.get("/movies/:indexNumber", function(req,res){
+    let requestParams = req.params.indexNumber
+
     let moviesArray = ["3 iditos", "titanic","pk", "forest gump"]
-    console.log(moviesArray)
-    res.send(moviesArray)
+    // console.log(moviesArray)
+    res.send(moviesArray[requestParams])
 })
 
-router.get("/movies/:indexNumber", function(req,res){
-    console.log("this request is "+JSON.stringify(req.params))
-    console.log("indexNumber is", " " + req.params.indexNumber)
-    res.send("done")
-})
+// router.get("/movies/:indexNumber", function(req,res){
+//     console.log("this request is "+JSON.stringify(req.params))
+//     console.log("indexNumber is", " " + req.params.indexNumber)
+//     res.send("done")
+// })
 
 router.get("/shoes",function(req,res){
     let shoesQuery = req.query.shoes
