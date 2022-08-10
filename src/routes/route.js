@@ -13,7 +13,7 @@ router.get("/random" , function(req, res) {
 
 
 router.get("/test-api" , function(req, res) {
-    res.send("hi FunctionUp")
+    res.send("hi there FunctionUp")
 })
 
 
@@ -70,4 +70,42 @@ router.post("/test-post-4", function(req, res) {
     res.send(  { msg: arr , status: true }  )
 })
 
+
+router.post("/players", function(req,res){
+    let arr = [
+        {
+            "name": "manish",
+            "dob": "1/1/1995",
+            "gender": "male",
+            "city": "jalandhar",
+            "sports": [
+                "swimming"
+            ]
+        },
+        {
+            "name": "gopal",
+            "dob": "1/09/1995",
+            "gender": "male",
+            "city": "delhi",
+            "sports": [
+                "soccer"
+            ]
+        },
+        {
+            "name": "lokesh",
+            "dob": "1/1/1990",
+            "gender": "male",
+            "city": "mumbai",
+            "sports": [
+                "soccer"
+            ]
+        },
+    ]
+ 
+    let onePlayer = req.body
+    arr.push(onePlayer)
+        console.log(arr)
+    res.send({msg:arr, status: true})
+    
+})
 module.exports = router;
