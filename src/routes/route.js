@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const UserModel= require("../models/userModel.js");
 const UserController= require("../controllers/userController");
-const bookModel = require("../models/bookmodel");
+const bookModel = require("../models/bookModel");
 const BookController = require("../controllers/bookController");
 
 router.get("/test-me", function (req, res) {
