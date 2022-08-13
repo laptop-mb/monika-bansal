@@ -1,6 +1,6 @@
 
-const bookModel = require("../models/userModel")
-const  getBooksModel = require("../models/bookModel.js")
+const bookModel = require("../models/bookModel")
+// const  getBooksModel = require("../models/bookModel.js")
 
 const createBook = async function(req,res){
     let data2 = req.body
