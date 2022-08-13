@@ -8,11 +8,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb+srv://bansalmonika123:mona@cluster0.4rsiaju.mongodb.net/monika-db",{
-    userNewurlParser: true
-})
-.then(() => console.log("mongodb is connected"))
-.catch(err => console.log(err))
 
 app.use('/', route);
 

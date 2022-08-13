@@ -43,9 +43,7 @@ router.get("/movies", function(req,res){
 // 2.	Create an API GET /movies/:indexNumber (For example GET /movies/1 is a valid request and it should return the movie in your array at index 1). You can define an array of movies again in your api
 router.get("/movies/:indexNumber", function(req,res){
 //line no. 39 pr array
-let index = req.params
-console.log(movies[index.indexNumber])
-res.send(movies[index.indexNumber])
+let index  = 
 })
 
 // 3.	Handle a scenario in problem 2 where if the index is greater than the valid maximum value a message is returned that tells the user to use a valid index in an error message.
