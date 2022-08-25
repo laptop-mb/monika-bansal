@@ -45,3 +45,12 @@ const getUsersData= async function (req, res) {
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
 module.exports.basicCode= basicCode
+
+let obj = {
+    name:"mona",
+    city:{
+        village:"bari"
+    }
+}
+console.log(obj.name)
+console.log(obj["city"])
