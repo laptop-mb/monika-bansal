@@ -1,8 +1,5 @@
 const UserModel= require("../models/userModel")
 
-
-
-
 const basicCode= async function(req, res, next) {
     let tokenDataInHeaders= req.headers.token
     console.log(tokenDataInHeaders)
@@ -29,8 +26,7 @@ const createUser= async function (req, res) {
     //Set an attribute in request object
     req.anything = "everything"
     
-    
-    console.log("Request headers after modificatiom",req.headers)
+    console.log("Request headers after modification",req.headers)
     
     //Set a header in response
     res.header('year','2022')
@@ -46,11 +42,11 @@ module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
 module.exports.basicCode= basicCode
 
-let obj = {
-    name:"mona",
-    city:{
-        village:"bari"
-    }
-}
-console.log(obj.name)
-console.log(obj["city"]["village"])
+// let obj = {
+//     name:"mona",
+//     city:{
+//         village:"newYork"
+//     }
+// }
+// console.log(obj.name)
+// console.log(obj["city"]["village"])
