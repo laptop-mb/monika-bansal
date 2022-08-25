@@ -53,4 +53,4 @@ let obj = {
     }
 }
 console.log(obj.name)
-console.log(obj["city"])
+console.log(obj["city"]["village"])
