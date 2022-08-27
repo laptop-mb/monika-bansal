@@ -9,3 +9,4 @@ let savedData = await productModel.create(data)
 }
 
 module.exports.createProduct = createProduct
+

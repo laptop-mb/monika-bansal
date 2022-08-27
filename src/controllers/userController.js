@@ -1,3 +1,4 @@
+const userModel = require("../models/userModel")
 const UserModel= require("../models/userModel")
 
 const basicCode= async function(req, res, next) {
@@ -38,15 +39,22 @@ const getUsersData= async function (req, res) {
     res.send({msg: allUsers})
 }
 
+const createUser2 = async function(req,res){
+let data = req.body
+let header = req.header["isfreeappuser"]
+if(header){
+console.log("your header is present")
+}
+if(!header){
+    return res.send("the request is missing in mandatory header")
+}
+
+let savedData = await userModel.create(data)
+    res.send(savedData)
+}
+
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
 module.exports.basicCode= basicCode
+module.exports.createUser2= createUser2
 
-// let obj = {
-//     name:"mona",
-//     city:{
-//         village:"newYork"
-//     }
-// }
-// console.log(obj.name)
-// console.log(obj["city"]["village"])
