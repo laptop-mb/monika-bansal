@@ -1,3 +1,5 @@
-exports.welcome() = function(){
+function welcome(){
     console.log("welcome to my application. i am monika bansal and a part of functionup plutonium cohort.")
 }
+
+module.exports.welcome = welcome
